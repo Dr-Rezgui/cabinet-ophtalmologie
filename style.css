@@ -1,37 +1,3 @@
-.banner {
-  background-image: url("banner.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 280px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-.banner-content {
-  position: relative;
-  margin-left: 60px;
-  max-width: 500px;
-  text-align: left;
-  color: #1f3b64;
-}
-
-.banner-content h1 {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.banner-content p {
-  font-size: 14px;
-  line-height: 1.6;
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -362,80 +328,172 @@ body {
     }
 }
 
+/* ===========================
+   Section Services
+=========================== */
 .services {
-  padding: 80px 20px;
-  background: #f5f8fc;
-  text-align: center;
+    background-color: #e6f0ff; /* Fond bleu doux pour la section */
+    padding: 60px 20px;
+    text-align: center;
 }
 
+/* Titre de la section */
 .services h2 {
-  font-size: 32px;
-  margin-bottom: 50px;
-  color: #0a2540;
+    font-size: 32px;
+    color: #1f3d7a; /* bleu foncé pour le titre */
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Grille des cartes */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
 }
 
+/* Responsive pour tablette */
 @media (max-width: 900px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+/* Responsive pour mobile */
 @media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
+/* Cartes */
 .service-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 35px 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
+/* Hover sur les cartes */
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+/* Icones */
 .service-card .icon {
-  font-size: 45px;
-  margin-bottom: 20px;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #1f3d7a; /* même bleu que le titre */
 }
 
+/* Titre de la carte */
 .service-card h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #0a2540;
+    font-size: 20px;
+    color: #1f3d7a;
+    margin-bottom: 12px;
 }
 
+/* Description */
 .service-card p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 25px;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
+/* Bouton */
 .service-card .btn {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #1a73e8;
-  color: white;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background 0.3s ease;
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #1f3d7a;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .service-card .btn:hover {
-  background: #0f5fd4;
+    background-color: #0f5fd4;
+}
+
+/* ===== Horaires & Nous Trouver ===== */
+
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.info-card h2 {
+  color: #1f4fa3;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.info-card .closed {
+  color: #b00020;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Google Map */
+.map-container {
+  margin-top: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+/* Desktop : 2 colonnes */
+@media (min-width: 768px) {
+  .info-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Bouton Itinéraire */
+.btn-itineraire {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #1f4fa3, #2f7cff);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-itineraire:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(47,124,255,0.4);
 }
