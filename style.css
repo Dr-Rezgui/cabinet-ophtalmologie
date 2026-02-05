@@ -116,6 +116,7 @@ footer {
     background-position: center;
     height: 300px;
     position: relative;
+    filter: brightness(1.1);
 }
 
 .banner::after {
@@ -125,7 +126,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .banner-content {
@@ -166,4 +167,152 @@ footer {
 .faq-item h3 {
     margin-bottom: 10px;
     color: #1a4d8f;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1a4d8f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+#service {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+}
+
+.service-item h3 {
+    color: #1a4d8f;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #1a4d8f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== STYLE GLOBAL DES PAGES DETAIL ===== */
+
+body {
+    background-color: #f2f6fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+}
+
+/* Conteneur principal */
+.page-detail {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Titre principal */
+.page-detail h1 {
+    font-size: 32px;
+    color: #1a4d8f;
+    margin-bottom: 25px;
+    border-left: 6px solid #1a4d8f;
+    padding-left: 15px;
+}
+
+/* Titres secondaires */
+.page-detail h2 {
+    font-size: 24px;
+    color: #0d3b66;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.page-detail h3 {
+    font-size: 20px;
+    color: #145da0;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphes */
+.page-detail p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Listes */
+.page-detail ul {
+    margin: 15px 0 25px 20px;
+    padding: 0;
+}
+
+.page-detail ul li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    list-style: none;
+    position: relative;
+}
+
+.page-detail ul li::before {
+    content: "✔";
+    position: absolute;
+    left: -20px;
+    color: #1a4d8f;
+    font-weight: bold;
+}
+
+/* Séparation visuelle douce */
+.page-detail hr {
+    border: none;
+    height: 1px;
+    background: #e0e6ef;
+    margin: 40px 0;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .page-detail {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+
+    .page-detail h1 {
+        font-size: 26px;
+    }
+
+    .page-detail h2 {
+        font-size: 20px;
+    }
 }
